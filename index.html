@@ -23,20 +23,20 @@ ol li img{display:inline;height:20px}
 .status .info{color:white!important;text-shadow:0 -1px 0 rgba(0,0,0,0.3);font-size:32px;line-height:36px;padding:8px 0}
 .main img{width:38px;margin-right:16px;height:38px}
 .main table{font-size:14px;}
-.main table th{text-align:right;}
+.main table th{text-align:left;}
 .bottom-message{width:720px;cellpadding:5px;cellspacing:0px}
-.bottom-message .message{font-size:13px;color:#aaa;line-height:18px;text-align:center}
+.bottom-message .message{font-size:13px;color:#aaa;line-height:18px;text-align:left}
 .bottom-message .designed{font-size:13px;color:#aaa;line-height:18px;font-style: italic;text-align:right}
-img.cartoon {width: 36px; display:inline}
+img.cartoon {width: 100px; display:inline}
 </style>
 </head>
 <body>
-  <div class="news">
+  <!--  <div class="news">
     <p>
-      Do you like new format of build information? <a href="mailto:larry.caiyu@gmail.com">give me feedback</a>
+      Do you like new format of build information? <a href="mailto:akshay.saini@olacabs.com">give me feedback</a>
     </p>
     <br>
-  </div>
+  </div> -->
   <!-- news -->
   <div class="content round_border">
     <div class="status">
@@ -44,29 +44,35 @@ img.cartoon {width: 36px; display:inline}
     </div>
     <!-- status -->
     <div class="main round_border">
-      <table>
+      <table >
         <tbody>
           <tr>
             <th>Project:</th>
-            <td>email-test</td>
+            <td>$PROJECT_NAME</td>
           </tr>
           <tr>
-            <th>Build #107</th>
-            <td><a
-              href="http://localhost:7080/jenkins/job/email-test/107/">http://localhost:7080/jenkins/job/email-test/107/</a></td>
+            <th>Build :</th>
+            <td>$BUILD_NUMBER</td>
+          </tr>
+          <tr>
+            <th>STATUS :</th>
+            <td>$BUILD_STATUS</td>
+          </tr>
+          <tr>
+            <th>Build_URL:</th>
+            <td><a href="$BUILD_URL">$BUILD_URL</a></td>
           </tr>
           <tr>
             <th>Date of build:</th>
-            <td>Thu, 22 Mar 2012 17:06:23 +0800</td>
+            <td>$BUILD_TIMESTAMP</td>
           </tr>
           <tr>
             <th>Build duration:</th>
             <td>0.52 sec</td>
           </tr>
           <tr>
-            <th>Changes</th>
-            <td><a
-              href="http://localhost:7080/jenkins/job/email-test/107/changes">http://localhost:7080/jenkins/job/email-test/107/changes</a></td>
+            <th>JOB_URL:</th>
+            <td>$JOB_URL</td>
           </tr>
           <tr>
             <td colspan="2">&nbsp;</td>
@@ -79,8 +85,8 @@ img.cartoon {width: 36px; display:inline}
     <!-- main -->
 
     <div class="artifacts round_border">
-      <b>Build Artifacts:</b>
-      replaceit2
+      <b>Test Results:</b>
+      JOB_IS_FAILED
     </div>
 
     <div class="artifacts round_border">
@@ -96,16 +102,16 @@ img.cartoon {width: 36px; display:inline}
     <div class="details round_border">
       <b>Changes in detail:</b>
       <ol>
-        <li>add groovy template more (larry.cai)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail0">detail</a>)
+        <li>add groovy template more (asaini)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail0">detail</a>)
         </li>
-        <li>update to first stable version (larry.cai)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail1">detail</a>)
+        <li>update to first stable version (asaini)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail1">detail</a>)
         </li>
-        <li>add image link to its id (larry.cai)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail2">detail</a>)
+        <li>add image link to its id (asaini)(<a href="http://localhost:7080/jenkins/job/email-test/107/changes#detail2">detail</a>)
         </li>
       </ol>
     </div>
     <!-- details -->
-    <div class="round_border">...</div>
+    <!-- <div class="round_border">...</div> -->
   </div>
   <!-- content -->
 
@@ -113,13 +119,12 @@ img.cartoon {width: 36px; display:inline}
     <tr>
       <td>
             <img class="cartoon"
-        src="http://www.gravatar.com/avatar/2515856e4452ac935394c3b5556ef323?s=128&d=identicon&r=PG"/><img class="cartoon"
-        src="http://www.gravatar.com/avatar/8f1c16c8fb46d3f829fae4022fab8433?s=128&d=identicon&r=PG"/>
+        src="Ola-signature-logo.png"/>
             </td>        
           <td class="message">You are receiving this email because you
         are relavent with this build<br>
         <p>
-          <a href="#">support team</a> | <a href="#">Gerrit server</a>
+          <a href="olaplay_automation@olacabs.com">QA team</a> | <a href="mailto:akshay.saini@olacabs.com">mail to akshay</a>
         </p>
       </td>
     </tr>
@@ -128,7 +133,5 @@ img.cartoon {width: 36px; display:inline}
         </tr>
   </table>
   <!-- bottom message -->
-    
-
-</body>
+    </body>
 </html>

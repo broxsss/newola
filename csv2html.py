@@ -13,7 +13,7 @@ m = fn.read()
 f = open(str(absolute)+"/newola/index.html",'r')
 filedata = f.read() # read contents
 f.close() # closes file
-filedata = filedata.replace("replaceit2", m)
+filedata = filedata.replace("JOB_IS_FAILED", m)
 f = open(str(absolute)+"/newola/index.html",'w')
 f.write(filedata)
 f.close()
