@@ -19,7 +19,7 @@ ol li img{display:inline;height:20px}
 .news{text-align:center;padding-top:15px;}
 .content{width:720px;background-color:white;margin-left: auto; margin-right: auto ;}
 .round_border{margin-bottom:5px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin-top:0;font-size:14px;padding:6px;border:1px solid #ccc}
-.status{background-color:green;font-size:28px;font-weight:bold;color:white;width:720px;height:52px;margin-bottom:18px;text-align:center;vertical-align:middle;border-collapse:collapse;background-repeat:no-repeat}
+.status{background-color:dodgerblue;font-size:28px;font-weight:bold;color:white;width:720px;height:52px;margin-bottom:18px;text-align:center;vertical-align:middle;border-collapse:collapse;background-repeat:no-repeat}
 .status .info{color:white!important;text-shadow:0 -1px 0 rgba(0,0,0,0.3);font-size:32px;line-height:36px;padding:8px 0}
 .main img{width:38px;margin-right:16px;height:38px}
 .main table{font-size:14px;}
@@ -64,7 +64,7 @@ img.cartoon {width: 100px; display:inline}
           </tr>
           <tr>
             <th>Date of build:</th>
-            <td> $BUILD_TIMESTAMP </td>
+            <td><script type="text/x-inert-content"></script>document.getElementById('datePicker').value = new Date().toDateInputValue();</td>
           </tr>
           <tr>
             <th>Build duration:</th>
@@ -90,13 +90,14 @@ img.cartoon {width: 100px; display:inline}
     </div>
 
     <div class="artifacts round_border">
-      <b>Build Artifacts:</b>
-      <ul>
+      <b>Build Console Log:</b>
+      <!-- <ul>
         <li><a href="#">jenkins/groovy-html-orig.template</a></li>
         <li><a href="#">jenkins/groovy-html.template</a></li>
         <li><a href="#">jenkins/groovy-html2.template</a></li>
         <li><a href="#">jenkins/groovy-html3.template</a></li>
-      </ul>
+      </ul> -->
+      <p>${BUILD_LOG, maxLines=100, escapeHtml=true}</p>
     </div>
     <!-- artifacts -->
     <div class="details round_border">
